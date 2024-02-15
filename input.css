@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-item {
+  @apply border-opacity-0 border-b border-white hover:border-opacity-100 transition duration-200 p-0;
+}
