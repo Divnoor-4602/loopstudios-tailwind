@@ -5,3 +5,53 @@
 .nav-item {
   @apply border-opacity-0 border-b border-white hover:border-opacity-100 transition duration-200 p-0;
 }
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  height: 2px;
+  width: 24px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  position: absolute;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-top {
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+/* open class to show when the hamburger when clicked */
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateX(-6px) translateY(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
